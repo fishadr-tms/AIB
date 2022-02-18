@@ -30,7 +30,7 @@
         "identity": {
             "type": "UserAssigned",
                     "userAssignedIdentities": {
-                    "<imgBuilderId>": {}
+                    "/subscriptions/8774a024-f5c8-44c1-a12b-29e2c1d27633/resourcegroups/TMSAzWinImg01/providers/Microsoft.ManagedIdentity/userAssignedIdentities/aibIdentity1645137204": {}
                         
                 }
                 },
@@ -57,7 +57,7 @@
                 "type": "PowerShell",
                 "name": "CreateBuildPath",
                 "runElevated": false,
-                "scriptUri": "https://raw.githubusercontent.com/danielsollondon/azvmimagebuilder/master/testPsScript.ps1"
+                "scriptUri": "https://raw.githubusercontent.com/tms-adrian-fish/AIB/main/AIBWindowsSWinstall.ps1"
             },
             {
                 "type": "WindowsRestart",
@@ -93,9 +93,9 @@
         "distribute": 
             [
                 {   "type":"ManagedImage",
-                    "imageId": "/subscriptions/<subscriptionID>/resourceGroups/<rgName>/providers/Microsoft.Compute/images/<imageName>",
-                    "location": "<region>",
-                    "runOutputName": "<runOutputName>",
+                    "imageId": "/subscriptions/8774a024-f5c8-44c1-a12b-29e2c1d27633/resourceGroups/TMSAzWinImg01/providers/Microsoft.Compute/images/win2019image1",
+                    "location": "uksouth",
+                    "runOutputName": "winSvrSigR01",
                     "artifactTags": {
                         "source": "azVmImageBuilder",
                         "baseosimg": "windows2019"
@@ -107,3 +107,8 @@
 ]
 
 }
+
+
+
+
+
