@@ -5,9 +5,9 @@ New-Item -Path 'C:\temp' -ItemType Directory -Force | Out-Null
 
 #Install VSCode
 Invoke-WebRequest -Uri 'https://go.microsoft.com/fwlink/?Linkid=852157' -OutFile 'c:\temp\VScode.exe'
-Start-Process -FilePath "c:\temp\VScode.exe" -ArgumentList "/quiet"
 #Start-Process -FilePath "c:\temp\VScode.exe" -ArgumentList "/quiet" -Wait 
-#Invoke-Expression -Command 'c:\temp\VScode.exe /verysilent'
+#Start-Process -FilePath "c:\temp\VScode.exe" -ArgumentList "/quiet" -Wait 
+Invoke-Expression -Command 'c:\temp\VScode.exe /VERYSILENT /NORESTART /MERGETASKS=!runcode'
 
 #Start sleep
 Start-Sleep -Seconds 360
