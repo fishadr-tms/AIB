@@ -11,11 +11,11 @@ Invoke-Expression -Command 'c:\temp\VScode.exe /verysilent'
 Start-Sleep -Seconds 10
 
 #InstallNotepadplusplus
-Invoke-WebRequest -Uri 'https://notepad-plus-plus.org/repository/7.x/7.7.1/npp.7.7.1.Installer.x64.exe' -OutFile 'c:\temp\notepadplusplus.exe'
-Invoke-Expression -Command 'c:\temp\notepadplusplus.exe /S'
+#Invoke-WebRequest -Uri 'https://notepad-plus-plus.org/repository/7.x/7.7.1/npp.7.7.1.Installer.x64.exe' -OutFile 'c:\temp\notepadplusplus.exe'
+#Invoke-Expression -Command 'c:\temp\notepadplusplus.exe /S'
 
 #Start sleep
-Start-Sleep -Seconds 10
+#Start-Sleep -Seconds 10
 
 #InstallFSLogix
 #Invoke-WebRequest -Uri 'https://aka.ms/fslogix_download' -OutFile 'c:\temp\fslogix.zip'
@@ -31,13 +31,13 @@ Start-Sleep -Seconds 10
 #New-ItemProperty -Path HKLM:\SOFTWARE\Microsoft\Teams -name IsWVDEnvironment -Value “1” -Force | Out-Null
 
 #Install VC++ & WebSocket Service then Teams with media optimisations
-Invoke-WebRequest -Uri 'https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads' -OutFile 'c:\temp\vc.msi'
-Invoke-Expression -Command 'c:\temp\vc.msi /quiet'
+#Invoke-WebRequest -Uri 'https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads' -OutFile 'c:\temp\vc.msi'
+#Invoke-Expression -Command 'c:\temp\vc.msi /quiet'
 #Start sleep
-Start-Sleep -Seconds 10
-Invoke-WebRequest -Uri 'https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4vkL6' -OutFile 'c:\temp\websocket.msi'
-Invoke-Expression -Command 'c:\temp\websocket.msi /quiet'
+#Start-Sleep -Seconds 10
+#Invoke-WebRequest -Uri 'https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4vkL6' -OutFile 'c:\temp\websocket.msi'
+#Invoke-Expression -Command 'c:\temp\websocket.msi /quiet'
 #Start sleep
-Start-Sleep -Seconds 10
-Invoke-WebRequest -Uri 'https://statics.teams.cdn.office.net/production-windows-x64/1.3.00.4461/Teams_windows_x64.msi' -OutFile 'c:\temp\Teams.msi'
-Invoke-Expression -Command 'msiexec /i C:\temp\Teams.msi /quiet /l*v C:\temp\teamsinstall.log ALLUSER=1 ALLUSERS=1'
+#Start-Sleep -Seconds 10
+#Invoke-WebRequest -Uri 'https://statics.teams.cdn.office.net/production-windows-x64/1.3.00.4461/Teams_windows_x64.msi' -OutFile 'c:\temp\Teams.msi'
+#Invoke-Expression -Command 'msiexec /i C:\temp\Teams.msi /quiet /l*v C:\temp\teamsinstall.log ALLUSER=1 ALLUSERS=1'
