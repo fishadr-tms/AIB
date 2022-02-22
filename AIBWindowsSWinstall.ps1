@@ -5,7 +5,7 @@ New-Item -Path 'C:\temp' -ItemType Directory -Force | Out-Null
 
 #Install PowerBI Desktop
 Invoke-WebRequest -Uri 'https://download.microsoft.com/download/8/8/0/880BCA75-79DD-466A-927D-1ABF1F5454B0/PBIDesktopSetup_x64.exe' -OutFile 'c:\temp\PBIDesktopSetup_x64.exe'
-Invoke-Expression -Command 'c:\temp\PBIDesktopSetup_x64.exe /SILENT'
+Invoke-Expression -Command 'c:\temp\PBIDesktopSetup_x64.exe /SILENT /NORESTART ACCEPT_EULA=1'
 #Start sleep
 Start-Sleep -Seconds 60
 
