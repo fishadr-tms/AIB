@@ -9,6 +9,10 @@ Invoke-Expression -Command 'c:\temp\PBIDesktopSetup_x64.exe /SILENT /NORESTART A
 #Start sleep
 Start-Sleep -Seconds 60
 
+#Install VS Community
+#Invoke-WebRequest -Uri 'https://download.visualstudio.microsoft.com/download/pr/928b2d78-4b74-4601-9c82-334cdbb1b3b4/16caa46dc7c5d67df5e16eab5d28932f59cfc678142bbafc1a5872a03473a1b9/vs_Community.exe' -OutFile 'c:\temp\vs_Community.exe'
+#Invoke-Expression -Command 'c:\temp\vs_Community.exe /SILENT /NORESTART ACCEPT_EULA=1'
+
 #Install VSCode
 Invoke-WebRequest -Uri 'https://go.microsoft.com/fwlink/?Linkid=852157' -OutFile 'c:\temp\VScode.exe'
 Invoke-Expression -Command 'c:\temp\VScode.exe /VERYSILENT /NORESTART /MERGETASKS=!runcode'
