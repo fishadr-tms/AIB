@@ -21,7 +21,6 @@ Start-Sleep -Seconds 60
 
 #Install VSCode Extensions
 Invoke-WebRequest -Uri 'https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-python/vsextensions/python/2022.3.10811002/vspackage' -OutFile 'c:\temp\ms-python.python-2022.3.10811002.vsix'
-Invoke-Expression -Command 'c:\temp\VScode.exe /VERYSILENT /NORESTART /MERGETASKS=!runcode'
 Invoke-Expression -Command 'c:\Program Files\Microsoft VS Code\bin\code.cmd --install-extension c:\temp\ms-python.python-2022.3.10811002.vsix'
 #Start sleep
 Start-Sleep -Seconds 60
