@@ -4,8 +4,10 @@
 New-Item -Path 'C:\temp' -ItemType Directory -Force | Out-Null
 
 #Install PowerBI Desktop
+Invoke-WebRequest -Uri 'https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-python/vsextensions/python/2022.3.10811002/vspackage' -OutFile 'c:\temp\ms-python2022.3.10811002.vsix'
+Invoke-WebRequest -Uri 'https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-python/vsextensions/python/2022.3.10811002/vspackage' -OutFile 'c:\temp\ms-python2022.vsix'
 Invoke-WebRequest -Uri 'https://download.microsoft.com/download/8/8/0/880BCA75-79DD-466A-927D-1ABF1F5454B0/PBIDesktopSetup_x64.exe' -OutFile 'c:\temp\PBIDesktopSetup_x64.exe'
-Invoke-Expression -Command 'c:\temp\PBIDesktopSetup_x64.exe /SILENT /NORESTART ACCEPT_EULA=1'
+#Invoke-Expression -Command 'c:\temp\PBIDesktopSetup_x64.exe /SILENT /NORESTART ACCEPT_EULA=1'
 #Start sleep
 Start-Sleep -Seconds 60
 
@@ -21,7 +23,10 @@ Start-Sleep -Seconds 60
 
 #Install VSCode Extensions
 Invoke-WebRequest -Uri 'https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-python/vsextensions/python/2022.3.10811002/vspackage' -OutFile 'c:\temp\ms-python.python-2022.3.10811002.vsix'
+Start-Sleep -Seconds 60
 Invoke-Expression -Command 'c:\Program Files\Microsoft VS Code\bin\code.cmd --install-extension c:\temp\ms-python.python-2022.3.10811002.vsix'
+Start-Sleep -Seconds 60
+Invoke-Expression -Command 'c:\Program Files\Microsoft VS Code\bin\code.cmd --install-extension c:\temp\ms-python.python-2022.vsix'
 #Start sleep
 Start-Sleep -Seconds 60
 
