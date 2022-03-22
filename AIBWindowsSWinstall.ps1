@@ -16,8 +16,9 @@ Start-Sleep -Seconds 60
 
 #Install VSCode
 Invoke-WebRequest -Uri 'https://go.microsoft.com/fwlink/?Linkid=852157' -OutFile 'c:\temp\VScode.exe'
+Invoke-Expression -Command 'c:\temp\VScode.exe /VERYSILENT /NORESTART /COMPONENTS=ms-python.python /LOG="%WINDIR%\Temp\VSCode64-Install.log"'
 #Invoke-Expression -Command 'c:\temp\VScode.exe /VERYSILENT /NORESTART /COMPONENTS="ms-python.python" /MERGETASKS=!runcode /LOG="%WINDIR%\Temp\VSCode64-Install.log"'
-Invoke-Expression -Command 'c:\temp\VScode.exe /SILENT /NORESTART /COMPONENTS=ms-python.python /LOG="%WINDIR%\Temp\VSCode64-Install.log"'
+#Invoke-Expression -Command 'c:\temp\VScode.exe /SILENT /NORESTART /COMPONENTS=ms-python.python /LOG="%WINDIR%\Temp\VSCode64-Install.log"'
 #Start sleep
 Start-Sleep -Seconds 60
 
